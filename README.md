@@ -13,12 +13,7 @@ The AI then:
 3. Human-in-the-Loop
 The final decision is always made by a human. This ensures quality and safety.
 
-Workflow diagramn
-graph LR
-    A[New Ticket] --> B[AI Triage Agent]
-    B --> C{Decision}
-    C -->|Routine| D[AI Drafts Reply]
-    C -->|Complex| E[Manual Escalation]
-    D --> F[Human Approval]
-    E --> F
-    F --> G[ServiceNow Updated]
+4. ### Privacy & Security: Local LLM Integration (Ollama)
+To ensure compliance with data protection standards, this architecture supports Local LLM deployment via Ollama
+Data Sovereignty: Sensitive ServiceNow tickets are processed locally, ensuring no data is leaked to third-party cloud providers.
+Efficiency: Utilizes local GPU/CPU resources to reduce operational costs of AI at scale.
